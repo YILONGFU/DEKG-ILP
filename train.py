@@ -3,7 +3,7 @@ import argparse
 import logging
 import torch
 from scipy.sparse import SparseEfficiencyWarning
-
+# https://pypi.tuna.tsinghua.edu.cn/simple
 from subgraph_extraction.datasets import SubgraphDataset, generate_subgraph_datasets
 from utils.initialization_utils import initialize_experiment, initialize_model
 from utils.graph_utils import collate_dgl, move_batch_to_device_dgl
@@ -13,7 +13,7 @@ from model.dgl.graph_classifier import GraphClassifier as dgl_model
 from managers.evaluator import Evaluator
 from managers.trainer import Trainer
 
-from warnings import simplefilter
+from warnings import simplefilter  # 忽略警告
 
 
 def main(params):
